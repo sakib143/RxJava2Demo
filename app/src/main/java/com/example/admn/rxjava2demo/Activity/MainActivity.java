@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View view) {
             switch (view.getId()){
                 case R.id.btnLoadArrayList:
-                    Intent intentSimpleDemo = new Intent(MainActivity.this,ArrayListDemoActivity.class);
+                    Intent intentSimpleDemo = new Intent(MainActivity.this,SampleDemoActivity.class);
                     startActivity(intentSimpleDemo);
                     break;
             }

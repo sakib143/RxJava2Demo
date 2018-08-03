@@ -1,6 +1,5 @@
 package com.example.admn.rxjava2demo.Activity;
 
-import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,71 +11,54 @@ import com.example.admn.rxjava2demo.R;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Callable;
-import java.util.function.Function;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
-import io.reactivex.ObservableSource;
-import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.observers.DisposableObserver;
 import io.reactivex.schedulers.Schedulers;
 
-public class ArrayListDemoActivity extends AppCompatActivity {
+public class ArrayListActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private CompositeDisposable disposable = new CompositeDisposable();
-    private Button btnLoadArray,btnDoSingleOperation;
     private List<NotesModel> alNotes;
-    private String strTemp = "";
+    private Button btnLoadArrayList;
+    private CompositeDisposable disposable = new CompositeDisposable();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_array_list_demo);
+        setContentView(R.layout.activity_array_list);
 
         getIds();
         setListner();
-
-    }
-
-    private void getIds() {
-        try {
-            btnLoadArray = findViewById(R.id.btnLoadArray);
-            btnDoSingleOperation = findViewById(R.id.btnDoSingleOperation);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     private void setListner() {
         try {
-            btnLoadArray.setOnClickListener(mClickListner);
-            btnDoSingleOperation.setOnClickListener(mClickListner);
+            btnLoadArrayList.setOnClickListener(ArrayListActivity.this);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    private View.OnClickListener mClickListner = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            try {
-                switch (view.getId()) {
-                    case R.id.btnLoadArray:
-                        loadArrayObservable();
-                        break;
-                    case R.id.btnDoSingleOperation:
-                        doSingleOperation();
-                        break;
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+    private void getIds() {
+        try {
+            btnLoadArrayList = findViewById(R.id.btnLoadArrayList);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-    };
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.btnLoadArrayList:
+                loadArrayObservable();
+                break;
+        }
+    }
 
     // TODO: 02-08-2018 Load arraylist static START
     private void loadArrayObservable() {
@@ -125,44 +107,6 @@ public class ArrayListDemoActivity extends AppCompatActivity {
         };
     }
     // TODO: 02-08-2018 Load arraylist static END
-
-    // TODO: 02-08-2018 Perform single Operation START
-    private void doSingleOperation() {
-        disposable.add(loadStringValueObservable()
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeWith(setValueObserver()));
-    }
-
-    private Observable<String> loadStringValueObservable() {
-        return Observable.defer(new Callable<ObservableSource<? extends String>>() {
-            @Override
-            public ObservableSource<? extends String> call() throws Exception {
-                strTemp = "Sakib";
-                return Observable.just(strTemp);
-            }
-        });
-    }
-
-    private DisposableObserver<String> setValueObserver (){
-        return new DisposableObserver<String>() {
-            @Override
-            public void onNext(String s) {
-                Log.e("==> ","Value of string is "+s);
-            }
-
-            @Override
-            public void onError(Throwable e) {
-
-            }
-
-            @Override
-            public void onComplete() {
-                Log.e("==> ","onComplete() is calling AND  value of strTemp is ?? "+strTemp);
-            }
-        };
-    }
-    // TODO: 02-08-2018 Perform single Operation END
 
     @Override
     protected void onDestroy() {

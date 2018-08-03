@@ -5,21 +5,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.ArrayListDemoActivity">
+    tools:context=".Activity.SampleDemoActivity">
 
     <Button
         android:id="@+id/btnLoadArray"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Load Array"
+        android:text="Load Array Demo"
         />
-
 
     <Button
         android:id="@+id/btnDoSingleOperation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Do single operation"
+        android:text="Get Edittext value"
+        />
+
+
+    <Button
+        android:id="@+id/btnTextChange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit text Change listner"
         />
 
 
