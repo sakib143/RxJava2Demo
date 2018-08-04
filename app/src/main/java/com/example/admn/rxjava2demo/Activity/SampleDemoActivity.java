@@ -24,8 +24,7 @@ import io.reactivex.schedulers.Schedulers;
 public class SampleDemoActivity extends AppCompatActivity {
 
     private CompositeDisposable disposable = new CompositeDisposable();
-    private Button btnLoadArray,btnDoSingleOperation,btnTextChange;
-
+    private Button btnLoadArray,btnDoSingleOperation,btnTextChange,btnObservableTypes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +41,7 @@ public class SampleDemoActivity extends AppCompatActivity {
             btnLoadArray = findViewById(R.id.btnLoadArray);
             btnDoSingleOperation = findViewById(R.id.btnDoSingleOperation);
             btnTextChange = findViewById(R.id.btnTextChange);
+            btnObservableTypes = findViewById(R.id.btnObservableTypes);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -52,6 +52,7 @@ public class SampleDemoActivity extends AppCompatActivity {
             btnLoadArray.setOnClickListener(mClickListner);
             btnDoSingleOperation.setOnClickListener(mClickListner);
             btnTextChange.setOnClickListener(mClickListner);
+            btnObservableTypes.setOnClickListener(mClickListner);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -73,6 +74,10 @@ public class SampleDemoActivity extends AppCompatActivity {
                     case R.id.btnTextChange:
                         Intent intentTextChange = new Intent(SampleDemoActivity.this,EditTextChangeActivity.class);
                         startActivity(intentTextChange);
+                        break;
+                    case R.id.btnObservableTypes:
+                        Intent intentObservableList = new Intent(SampleDemoActivity.this,ObservableTypesActivity.class);
+                        startActivity(intentObservableList);
                         break;
                 }
             } catch (Exception e) {

@@ -12,21 +12,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Load Array Demo"
-        />
+        android:textAllCaps="false"/>
 
     <Button
         android:id="@+id/btnDoSingleOperation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Get Edittext value"
-        />
-
+        android:textAllCaps="false"/>
 
     <Button
         android:id="@+id/btnTextChange"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Edit text Change listner"
+        android:textAllCaps="false"
+        />
+
+    <Button
+        android:id="@+id/btnObservableTypes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Types of Observable and Observer"
+        android:textAllCaps="false"
         />
 
 

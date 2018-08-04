@@ -19,7 +19,12 @@
         <activity android:name=".Activity.SampleDemoActivity" />
         <activity android:name=".Activity.GetEdittextStringActivity" />
         <activity android:name=".Activity.EditTextChangeActivity" />
-        <activity android:name=".Activity.ArrayListActivity"></activity>
+        <activity android:name=".Activity.ArrayListActivity" />
+        <activity android:name=".Activity.ObservableTypesActivity" />
+        <activity android:name=".Activity.SingleObservableActivity" />
+        <activity android:name=".Activity.MayBeObservableActivity" />
+        <activity android:name=".Activity.CompletableObservableActivity" />
+        <activity android:name=".Activity.FlowableObservableActivity"></activity>
     </application>
 
 </manifest>
