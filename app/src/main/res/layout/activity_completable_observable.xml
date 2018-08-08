@@ -12,7 +12,19 @@
         android:textSize="18sp"
         android:text="Completable Observable Demo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        />
+
+    <TextView
+        android:text="Completable observable won’t emit any data instead it notifies the status of the task either success or failure.\nThis observable can be used when you want to perform some task and not expect any value. \nA use case would be updating some data on the server by making PUT request."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        />
+
 
     <Button
         android:id="@+id/btnLoadCompletableDemo"
@@ -20,6 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
+        android:layout_marginTop="50dp"
         />
 
 

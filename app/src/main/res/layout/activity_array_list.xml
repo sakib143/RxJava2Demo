@@ -13,12 +13,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
         />
 
     <Button
         android:id="@+id/btnLoadArrayList"
         android:text="Load Arraylist "
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        />
 
 </LinearLayout>

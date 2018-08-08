@@ -1,49 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Activity.ObservableTypesActivity">
 
 
     <TextView
-        android:textSize="18sp"
-        android:text="Common Observable types listing."
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Common Observable types listing."
+        android:textSize="18sp"
+        android:layout_gravity="center"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnSingleObservable"
-        android:text="Single Observable"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        />
+        android:layout_marginTop="50dp"
+        android:text="Single Observable"
+        android:textAllCaps="false" />
 
     <Button
         android:id="@+id/btnMayBeObservable"
-        android:text="May be Observable"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="May be Observable"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btnCompletableObservable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Completable Observable"
         android:textAllCaps="false"
+        android:layout_marginTop="50dp"
         />
 
     <Button
-    android:id="@+id/btnCompletableObservable"
-    android:text="Completable Observable"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:textAllCaps="false"
-    />
-
-    <Button
         android:id="@+id/btnFlowableObservable"
-        android:text="Flowable Observable"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Flowable Observable"
         android:textAllCaps="false"
+        android:layout_marginTop="50dp"
         />
 
 

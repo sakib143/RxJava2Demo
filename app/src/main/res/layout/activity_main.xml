@@ -8,17 +8,33 @@
     android:layout_height="match_parent"
     tools:context=".Activity.MainActivity">
 
+
+    <TextView
+        android:text="RxJava Tutorials"
+        android:layout_gravity="center"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        />
+
     <Button
         android:id="@+id/btnLoadArrayList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sample demos"/>
+        android:text="Sample demos"
+        android:layout_marginTop="50dp"
+        android:textAllCaps="false"
+        />
 
 
     <Button
         android:id="@+id/btnApiCallingDemos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Api calling Demos"/>
+        android:text="Api calling Demos"
+        android:layout_marginTop="50dp"
+        android:textAllCaps="false"
+        />
 
 </LinearLayout>

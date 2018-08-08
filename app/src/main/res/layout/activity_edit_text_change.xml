@@ -14,6 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold"
         />
 
 
@@ -21,7 +23,11 @@
         android:id="@+id/edtValue"
         android:hint="enter value"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        />
+
+
 
     <TextView
         android:id="@+id/tvEnteredValue"

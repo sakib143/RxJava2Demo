@@ -11,6 +11,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Flowable observable Demo"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flowable observable should be used when an Observable is generating huge amount of events/data than the Observer can handle. \nFlowable can be used when the source is generating 10k+ events and subscriber can’t consume it all."
+        android:textSize="18sp"
+        android:layout_marginTop="50dp"
         />
 
 
@@ -18,7 +30,9 @@
         android:id="@+id/btnFlowableDemo"
         android:text="Flowable Observable loading"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        />
 
 
 </LinearLayout>

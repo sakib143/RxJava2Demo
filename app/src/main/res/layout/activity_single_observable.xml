@@ -8,18 +8,20 @@
 
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="Single Observable demo"
-        android:textSize="18sp" />
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:gravity="center"
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Single always emits only one value or throws an error.
-        A use case of Single would be making a network call to get response as the response will be fetched at once."
+        android:text="Single always emits only one value or throws an error. \n A use case of Single would be making a network call to get response as the response will be fetched at once."
         android:textSize="18sp" />
 
 

@@ -11,24 +11,29 @@
     <TextView
         android:text="May be Observable Demo"
         android:textSize="18sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        />
 
     <TextView
         android:textSize="15sp"
-        android:text="Maybe observable may or may not emits a value. This observable can be used when you are expecting an item to be emitted optionally."
+        android:text="Maybe observable may or may not emits a value. \nThis observable can be used when you are expecting an item to be emitted optionally."
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-
-
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        />
 
     <Button
         android:id="@+id/btnMayBeLoadData"
         android:text="btnLoadData"
         android:textAllCaps="false"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        />
 
 
 </LinearLayout>
