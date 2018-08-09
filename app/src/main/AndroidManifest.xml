@@ -24,7 +24,8 @@
         <activity android:name=".Activity.SingleObservableActivity" />
         <activity android:name=".Activity.MayBeObservableActivity" />
         <activity android:name=".Activity.CompletableObservableActivity" />
-        <activity android:name=".Activity.FlowableObservableActivity"></activity>
+        <activity android:name=".Activity.FlowableObservableActivity" />
+        <activity android:name=".Activity.SearchLocalActivity"></activity>
     </application>
 
 </manifest>

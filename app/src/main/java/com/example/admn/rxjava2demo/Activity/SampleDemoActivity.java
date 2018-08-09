@@ -24,7 +24,7 @@ import io.reactivex.schedulers.Schedulers;
 public class SampleDemoActivity extends AppCompatActivity {
 
     private CompositeDisposable disposable = new CompositeDisposable();
-    private Button btnLoadArray,btnDoSingleOperation,btnTextChange,btnObservableTypes;
+    private Button btnLoadArray,btnDoSingleOperation,btnTextChange,btnObservableTypes,btnSearchFromArray;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +42,7 @@ public class SampleDemoActivity extends AppCompatActivity {
             btnDoSingleOperation = findViewById(R.id.btnDoSingleOperation);
             btnTextChange = findViewById(R.id.btnTextChange);
             btnObservableTypes = findViewById(R.id.btnObservableTypes);
+            btnSearchFromArray = findViewById(R.id.btnSearchFromArray);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -53,6 +54,7 @@ public class SampleDemoActivity extends AppCompatActivity {
             btnDoSingleOperation.setOnClickListener(mClickListner);
             btnTextChange.setOnClickListener(mClickListner);
             btnObservableTypes.setOnClickListener(mClickListner);
+            btnSearchFromArray.setOnClickListener(mClickListner);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -78,6 +80,10 @@ public class SampleDemoActivity extends AppCompatActivity {
                     case R.id.btnObservableTypes:
                         Intent intentObservableList = new Intent(SampleDemoActivity.this,ObservableTypesActivity.class);
                         startActivity(intentObservableList);
+                        break;
+                    case R.id.btnSearchFromArray:
+                        Intent intentSearchFromArray = new Intent(SampleDemoActivity.this,SearchLocalActivity.class);
+                        startActivity(intentSearchFromArray);
                         break;
                 }
             } catch (Exception e) {
