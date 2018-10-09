@@ -30,4 +30,5 @@ dependencies {
     implementation "com.jakewharton.rxbinding2:rxbinding:2.0.0"
     //this library is used to perform android widget operaion.
     implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.amitshekhar.android:rx2-android-networking:1.0.2'
 }

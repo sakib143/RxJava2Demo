@@ -41,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intentSimpleDemo);
                         break;
                     case R.id.btnApiCallingDemos:
-                        Toast.makeText(MainActivity.this,"Under Development ",Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(MainActivity.this,ApiCallActivity.class);
+                        startActivity(intent);
                         break;
-
                 }
             } catch (Exception e) {
                 e.printStackTrace();

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.admn.rxjava2demo">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -25,7 +27,8 @@
         <activity android:name=".Activity.MayBeObservableActivity" />
         <activity android:name=".Activity.CompletableObservableActivity" />
         <activity android:name=".Activity.FlowableObservableActivity" />
-        <activity android:name=".Activity.SearchLocalActivity"></activity>
+        <activity android:name=".Activity.SearchLocalActivity" />
+        <activity android:name=".Activity.ApiCallActivity"></activity>
     </application>
 
 </manifest>
