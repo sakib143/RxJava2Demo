@@ -9,8 +9,11 @@ import android.widget.Button;
 import com.example.admn.rxjava2demo.Model.LoginModel;
 import com.example.admn.rxjava2demo.Model.User;
 import com.example.admn.rxjava2demo.R;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.rx2androidnetworking.Rx2AndroidNetworking;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -101,9 +104,26 @@ public class ApiCallActivity extends AppCompatActivity {
                     public void onComplete() {
                         Log.e("onComplete ==>", " List size is : "+ alUserList.size());
 
-                        for (int i = 0; i < alUserList.size(); i++) {
-                            Log.e("==>"," " + alUserList.get(i).getFirstname());
+//                        for (int i = 0; i < alUserList.size(); i++) {
+//                            Log.e("==>"," " + alUserList.get(i).getFirstname());
+//                        }
+
+                        // TODO: 09-10-2018 Convert array to JsonArray
+                        GsonBuilder gsonBuilder = new GsonBuilder();
+                        Gson gson = gsonBuilder.create();
+                        String strObject= gson.toJson(alUserList);
+
+                        Log.e("String check"," ==> "+ strObject);
+
+                        // TODO: 09-10-2018 Add JSON ARRAY TO JSON OBJECT
+                        try {
+                            JSONObject  jsonObject = new JSONObject();
+                            jsonObject.put("data", new JSONArray(strObject));
+                            Log.e("onComplete ==>", " Json Array "+ jsonObject);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
                         }
+
                     }
                 }));
     }
@@ -119,6 +139,12 @@ public class ApiCallActivity extends AppCompatActivity {
                     @Override
                     public void onNext(User notesModel) {
                         Log.e("Success ==>", " User name: " + notesModel.getFirstname());
+
+                        // TODO: 09-10-2018 Convert response to JsonObject
+                        Gson gson = new Gson();
+                        String json = gson.toJson(notesModel);
+                        Log.e("Success ==>", " json: " + json);
+
                     }
 
                     @Override
